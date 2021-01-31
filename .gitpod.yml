@@ -1,0 +1,13 @@
+image: gitpod/workspace-full-vnc # anticipating gt gui environment
+
+ports:
+  - port: 5900 # regular vnc to workspace desktop - not used
+    onOpen: ignore
+  - port: 6080 # novnc browser to workspace desktop
+    onOpen: open-browser
+
+tasks:
+  - name: docker up
+    command: sudo docker-up
+  - name: more commands
+    command: echo hi there
